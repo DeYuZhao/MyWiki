@@ -16,4 +16,7 @@ Integer a = Integer.valueOf(123);//装箱
 <br>
 int b = a.intValue(); //拆箱
 <br>
-![自动装箱和拆箱](images/装箱拆箱.png)
+<img src="images/装箱拆箱.png" width="545px" height="245px">
+
+## == 和 equals()的区别
+
