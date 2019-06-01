@@ -1,4 +1,4 @@
-# MyWiki/DigitalCurrency
+# MyWiki/BlockChain
 <p>主要内容:</p>
 <p>
   1、主流货币的相关知识
