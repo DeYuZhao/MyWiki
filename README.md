@@ -1,7 +1,7 @@
 # MyWiki
 <p>技术&amp;&amp;面试&amp;&amp;秋招</p>
 <p>主要内容:</p>
-<p style="text-indent: 2em;">
+<p style="text-indent: 4em;">
   1、收集学习过程中各类技术的方法、难点、解决方案（会重点关注生产环境有可能出现的问题）
 </p>
 <p>
