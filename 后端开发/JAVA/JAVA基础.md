@@ -32,4 +32,28 @@ int b = a.intValue(); //拆箱
 >回收旧String的过程，所以执行速度很慢。而StringBuilder和StringBuffer就是直接修改变量的值，
 >所以速度快很多。
 * 线程安全:StringBuilder是线程不安全的，而StringBuffer是线程安全的
+>如果一个StringBuffer对象在字符串缓冲区被多个线程使用时，StringBuffer中很多方法可以带有sync
+>hronized关键字，所以可以保证线程是安全的，但StringBuilder的方法没有这个关键字，所以不能保证
+>线程安全。所以多线程建议使用StringBuffer，单线程建议使用更快速的StringBuilder。
 * 使用场景
+>String：适用于少量的字符串操作的情况
+>StringBuilder：适用于单线程下在字符缓冲区进行大量操作的情况
+>StringBuffer：适用多线程下在字符缓冲区进行大量操作的情况
+
+## Java集合类简述
+<p>java中的集合分为value(Collection)和key-value(Map)两种</p>
+<p>存储value的有list和set:</p>
+<p>list是有序的,可重复的</p>
+<p>set是无序的,不可重复的</p>
+<p>存储为key-value是map:HashMap,Hashtable,CurrentHashMap</p>
+>相关的JDK源码待补充...
+
+## ArrayList,Vector和LinkedList的区别
+* Vector和ArrayList都是以数组形式存储，LinkedList是以链表形式存储;所以linkedList适合插入、删除，不适合查找，Vector和ArrayList适合查找
+* Vector线程同步，ArrayList和LinkedList线程不同步
+
+
+
+
+
+
