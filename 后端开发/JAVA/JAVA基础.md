@@ -42,10 +42,9 @@ int b = a.intValue(); //拆箱
 
 ## Java集合类简述
 <p>java中的集合分为value(Collection)和key-value(Map)两种</p>
-<p>存储value的有list和set:</p>
-<p>list是有序的,可重复的</p>
-<p>set是无序的,不可重复的</p>
+<p>存储value的有list和set:list是有序的,可重复的;set是无序的,不可重复的</p>
 <p>存储为key-value是map:HashMap,Hashtable,CurrentHashMap</p>
+
 >相关的JDK源码待补充...
 
 ## ArrayList,Vector和LinkedList的区别
