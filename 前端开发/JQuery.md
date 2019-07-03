@@ -8,3 +8,41 @@ function getQueryString(name) {
     if(r!=null) return unescape(r[2]); return null;
 }
 ```
+## 树形结构下拉框实现(使用bootstrap-treeview插件)
+```js
+var defaultData = [
+    {
+        text: '地域特色',
+        nodes: [
+            {
+                text: '华北馆',
+                nodes: [
+                    {
+                        text: '北京'
+                    }
+                ]
+            }
+        ]
+    }
+ ];
+var $checkableTree = $('#treeview-checkable').treeview({
+    data: defaultData,
+    showIcon: false,
+    showCheckbox: true,
+    state: {
+        checked: false,
+        disabled: false,
+        expanded: false,
+        selected: false
+    },
+    levels: 0,
+    expandIcon: 'mdi mdi-caret-right',// 展开图标
+    collapseIcon: 'mdi mdi-caret-down',// 收缩图标
+    onNodeChecked: function(event, node) { //勾选事件
+    },
+    onNodeUnchecked: function (event, node) { //取消勾选事件
+    }
+});
+```
+
+[bootstrap-treeview 中文API文档](https://www.cnblogs.com/tangzeqi/p/8021637.html)

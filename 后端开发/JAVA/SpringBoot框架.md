@@ -54,7 +54,20 @@ controller:
 public @ResponseBody SomeData complicateObject(@RequestBody User user)
 ```
 
+## 报错信息解决
+<p>1、spring service层报错invoke失败，找不到方法</p>
+<p>检查service实现类是否添加@Service注解</p>
+<p>检查注入是否添加@Reference注解</p>
+<p>检查引入的注解是否符合项目要求，相同注解可能有多个版本</p>
+<p>2、spring dao层报错找不到updateById方法</p>
+<p>entity中主键没有加注解：</p>
 
+```
+@Id
+@GeneratedValue
+@Column(nullable = false, updatable = false)
+private Long id;
+```
 
 
 
