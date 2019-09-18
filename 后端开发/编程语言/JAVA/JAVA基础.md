@@ -51,7 +51,10 @@ int b = a.intValue(); //拆箱
 * Vector和ArrayList都是以数组形式存储，LinkedList是以链表形式存储;所以linkedList适合插入、删除，不适合查找，Vector和ArrayList适合查找
 * Vector线程同步，ArrayList和LinkedList线程不同步
 
+## Java Stream
+<p>在java8中新增了stream，提供了简洁的遍历、分组、查询功能</p>
 
+[java 8 Stream](https://www.runoob.com/java/java8-streams.html)
 
 
 
