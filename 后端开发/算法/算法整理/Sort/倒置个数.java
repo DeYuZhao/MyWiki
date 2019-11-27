@@ -1,5 +1,7 @@
 package Sort;
 
+import java.util.Scanner;
+
 /**
  * @author zhaodeyu
  * @classname Sort.倒置个数
@@ -9,7 +11,57 @@ package Sort;
  * @date 2019-11-26 23:31
  */
 public class 倒置个数 {
-    public static void main(String args[]) {
+    private static int[] aux;
 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int test = sc.nextInt();
+        for (int i = 0; i < test; i++) {
+            int n = sc.nextInt();
+            int[] nums = new int[n];
+            for (int j = 0; j < n; j++) {
+                nums[j] = sc.nextInt();
+            }
+            System.out.println(sort(nums));
+        }
+    }
+
+    public static int sort(int[] a) {
+        aux = new int[a.length];
+        return sort(a, 0, a.length - 1);
+    }
+
+    private static int sort(int[] a, int lo, int hi) {
+        if (hi <= lo) {
+            return 0;
+        }
+        int mid = lo + (hi - lo) / 2;
+        int count = 0;
+        count += sort(a, lo, mid);
+        count += sort(a, mid + 1, hi);
+        return count + merge(a, lo, mid, hi);
+    }
+
+    private static int merge(int[] a, int lo, int mid, int hi) {
+        for (int k = lo; k <= hi; k++) {
+            aux[k] = a[k];
+        }
+
+        int count = 0;
+
+        int i = lo, j = mid + 1;
+        for (int k = lo; k <= hi; k++) {
+            if (i > mid) {
+                a[k] = aux[j++];
+            } else if (j > hi) {
+                a[k] = aux[i++];
+            } else if (aux[j] < aux[i]) {
+                count += mid - i + 1;
+                a[k] = aux[j++];
+            } else {
+                a[k] = aux[i++];
+            }
+        }
+        return count;
     }
 }
